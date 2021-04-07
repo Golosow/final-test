@@ -20,6 +20,8 @@ of the page in case any test case will fail.
 
 [pages/settings.py](pages/settings.py) contains variables.
 
+[pages/yandex.py](pages/yandex.py) contains locators.
+
 [tests/test_yandex_market.py](tests/test_smoke_yandex_market.py) contains several smoke Web UI tests for YandexMarket (https://market.yandex.ru/)
 
 
