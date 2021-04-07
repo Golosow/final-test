@@ -1,26 +1,44 @@
 Introduction
-This repository contains basic example of usage PageObject patter with Selenium and Python (PyTest + Selenium).
+------------
 
-Video screencast with the description ot this code: https://www.youtube.com/watch?v=BRxp1Kn1G7w
+This repository contains basic example of usage PageObject
+patter with Selenium and Python (PyTest + Selenium).
+
+Video screencast with the description ot this code:
+https://www.youtube.com/watch?v=BRxp1Kn1G7w
+
 
 Files
-conftest.py contains all the required code to catch failed test cases and make screenshot of the page in case any test case will fail.
+-----
 
-pages/base.py contains PageObject pattern implementation for Python.
+[conftest.py](conftest.py) contains all the required code to catch failed test cases and make screenshot
+of the page in case any test case will fail.
 
-pages/elements.py contains helper class to define web elements on web pages.
+[pages/base.py](pages/base.py) contains PageObject pattern implementation for Python.
 
-tests/test_yandex_market.py contains several smoke Web UI tests for YandexMarket (https://market.yandex.ru/)
+[pages/elements.py](pages/elements.py) contains helper class to define web elements on web pages.
+
+[tests/test_yandex_market.py](tests/test_smoke_yandex_market.py) contains several smoke Web UI tests for YandexMarket (https://market.yandex.ru/)
+
 
 How To Run Tests
-Install all requirements:
+----------------
 
-pip3 install -r requirements
-Download Selenium WebDriver from https://chromedriver.chromium.org/downloads (choose version which is compatible with your browser)
+1) Install all requirements:
 
-Run tests:
+    ```bash
+    pip3 install -r requirements
+    ```
 
-python3 -m pytest -v --driver Chrome --driver-path ~/chrome tests/*
-alt text
+2) Download Selenium WebDriver from https://chromedriver.chromium.org/downloads (choose version which is compatible with your browser)
 
-Note: ~/chrome in this example is the file of Selenium WebDriver downloaded and unarchived on step #2.
+3) Run tests:
+
+    ```bash
+    python3 -m pytest -v --driver Chrome --driver-path ~/chrome tests/*
+    ```
+
+   ![alt text](example.png)
+
+Note:
+~/chrome in this example is the file of Selenium WebDriver downloaded and unarchived on step #2.
